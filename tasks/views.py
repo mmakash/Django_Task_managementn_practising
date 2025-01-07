@@ -15,3 +15,7 @@ def show_specefic_task(request,id):
     print('id',id)
     print('type: ',type(id))
     return HttpResponse(f"<h1 style='color:red'>This is show specefic task page: {id}</h1>")
+
+
+def about(request):
+    return HttpResponse("<h1 style='color:red'>This is about page</h1>")
