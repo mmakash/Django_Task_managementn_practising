@@ -1,0 +1,209 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}User Dashboard{% endblock title %}
+
+{% block Tasks %}
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+  {% comment %} left Task table {% endcomment %}
+  <div class="bg-white rounded-xl shadow-sm">
+    <h1 class="text-2xl font-semibold text-gray-600 p-4">
+      Todays Task
+    </h1>
+     {% comment %} left task item {% endcomment %}
+    <div class="devide-y devide-gray-100">
+      <div class="grid grid-cols-2 p-4 gap-4 items-center">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div>
+            <span class="text-blue-800 text-2xl">Hello Low Task</span>
+          </div>
+        </div>
+        <div>
+          <span
+            class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm"
+            >Low</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="devide-y devide-gray-100">
+      <div class="grid grid-cols-2 p-4 gap-4 items-center">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div>
+            <span>Test Low Task</span>
+          </div>
+        </div>
+        <div>
+          <span
+            class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm"
+            >Low</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="devide-y devide-gray-100">
+      <div class="grid grid-cols-2 p-4 gap-4 items-center">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div>
+            <span>Test Low Task</span>
+          </div>
+        </div>
+        <div>
+          <span
+            class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm"
+            >Low</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="devide-y devide-gray-100">
+      <div class="grid grid-cols-2 p-4 gap-4 items-center">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div>
+            <span>Test Low Task</span>
+          </div>
+        </div>
+        <div>
+          <span
+            class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm"
+            >Low</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% comment %} left Task table end  {% endcomment %}
+
+  {% comment %} right side table start {% endcomment %}
+
+  <div class="bg-white rounded-xl shadow-sm">
+    <h1 class="text-2xl font-semibold text-gray-600 p-4">All Task</h1>
+     {% comment %} table header {% endcomment %}
+    <div
+      class="grid grid-cols-4 p-4 border-b border-gray-200 text-sm text-gray-600"
+    >
+      <div>Task</div>
+      <div>Title</div>
+      <div>Team</div>
+      <div>Created AT</div>
+    </div>
+     {% comment %} task item {% endcomment %}
+    <div class="devide-y devide-gray-100">
+      <div class="grid grid-cols-4 p-4 gap-4 items-center">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div>
+            <span>Test Low Task</span>
+          </div>
+        </div>
+        <div>
+          <span
+            class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm"
+            >Low</span
+          >
+        </div>
+        <div class="flex -space-x-2">
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white"
+          >
+            CA
+          </div>
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white"
+          >
+            CA
+          </div>
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white"
+          >
+            CA
+          </div>
+        </div>
+        <div>
+          <span class="text-gray-600">9 Months Ago</span>
+        </div>
+      </div>
+    </div>
+    <div class="devide-y devide-gray-100">
+      <div class="grid grid-cols-4 p-4 gap-4 items-center">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div>
+            <span>Test Low Task</span>
+          </div>
+        </div>
+        <div>
+          <span
+            class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm"
+            >Low</span
+          >
+        </div>
+        <div class="flex -space-x-2">
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white"
+          >
+            CA
+          </div>
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white"
+          >
+            CA
+          </div>
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white"
+          >
+            CA
+          </div>
+        </div>
+        <div>
+          <span class="text-gray-600">9 Months Ago</span>
+        </div>
+      </div>
+    </div>
+    <div class="devide-y devide-gray-100">
+      <div class="grid grid-cols-4 p-4 gap-4 items-center">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+          <div>
+            <span>Test Low Task</span>
+          </div>
+        </div>
+        <div>
+          <span
+            class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm"
+            >Low</span
+          >
+        </div>
+        <div class="flex -space-x-2">
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white"
+          >
+            CA
+          </div>
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white"
+          >
+            CA
+          </div>
+          <div
+            class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white"
+          >
+            CA
+          </div>
+        </div>
+        <div>
+          <span class="text-gray-600">9 Months Ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ {% comment %} right side table end {% endcomment %}
+</div>
+
+{% endblock Tasks %}

@@ -1,0 +1,54 @@
+{% extends "dashboard/dashboard.html" %}
+
+{% block title %}Manager Dashboard{% endblock title %}
+
+{% block Tasks %}
+
+ {% comment %} Task table {% endcomment %}
+<div class="bg-white rounded-xl shadow-sm">
+    <h1 class="text-2xl font-semibold text-gray-600 p-4">All Task</h1>
+      {% comment %} table header {% endcomment %}
+      <div class="grid grid-cols-4 p-4 border-b border-gray-200 text-sm text-gray-600">
+          <div>Task</div>
+          <div>Title</div>
+          <div>Team</div>
+          <div>Created AT</div>
+      </div>
+      {% comment %} task item {% endcomment %}
+      {% for task in tasks  %}
+      
+      <div class="devide-y devide-gray-100">
+        <div class="grid grid-cols-4 p-4 gap-4 items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+               <div>
+                <span>{{task.tite}}</span>
+                <a href="{% url 'update-task' task.id %}" class="px-3 py-1 rounded-full bg-green-600 text-blue-600 text-sm">Edit</a>
+                <form action="{% url 'delete-task' task.id %}" method="post">
+                    {% csrf_token %}
+                    <button class="bg-red-600 text-black px-2 py-1 text-sm">Delete</button>
+                </form>
+               </div>
+            </div>
+            <div>
+                <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm">{{task.details.get_priority_display}}</span>
+            </div>
+            <div class="flex -space-x-2">
+               {% for emp in task.assigned_to.all %}
+
+               <div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm border-2 border-white">{{emp|slice:":2"}}</div>
+
+
+               {% endfor %}
+               
+            </div>
+            <div>
+                <span class="text-gray-600">{{task.created_at|timesince}}</span>
+            </div>
+          </div>
+    </div>
+
+      {% endfor %}
+   </div>
+
+   {% endblock Tasks %}
